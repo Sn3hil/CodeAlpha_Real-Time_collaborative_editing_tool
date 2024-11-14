@@ -1,0 +1,154 @@
+.App {
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* Ensures the body takes up full viewport height */
+  margin: 0;
+  background-color: black;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+/* App.css */
+.main-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 100vh;
+  
+}
+
+.editor-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 600px;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+.editor {
+  flex-grow: 1;
+  font-size: 18px;
+  padding: 20px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  resize: none;
+  outline: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  margin-bottom: 10px;
+}
+
+
+.typing-indicator {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+  font-size: 20px;
+  color: #000000;
+}
+
+.username-input {
+  margin-top: 20px;
+}
+
+.username-input input {
+  padding: 10px;
+  font-size: 18px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+}
+
+/* Active Users Container */
+.user-list-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  max-width: 200px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.user-list-container h3 {
+  margin: 0;
+  color :rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+}
+
+.user-list-container ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  color :rgba(255, 255, 255, 0.8);
+}
+
+.user-list-container li {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.user-messages {
+  margin-top: 20px;
+}
+
+.message {
+  font-size: 14px;
+  color: #666;
+}
+
+
+/* Add styles for cursor markers */
+.cursor-marker {
+  position: absolute;
+  width: 2px;
+  height: 18px; /* Adjust height based on text line height */
+  background-color: red; /* You can change the color for different users */
+  z-index: 10;
+  pointer-events: none; /* Prevent interaction with the marker */
+}
+
+.cursor-label {
+  position: absolute;
+  font-size: 12px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 3px;
+  padding: 2px 4px;
+  transform: translateY(-20px); /* Position the label above the marker */
+  z-index: 10;
+}
+
+.file-upload {
+  margin-bottom: 20px;
+  font-size: 16px;
+  color : white;
+}
